@@ -89,7 +89,7 @@ irc.connect = function(channels) {
 				if (matches[1] === "load") {
 
 					var moduleName = matches[2];
-					var modulePath = './modules/' + moduleName + '.js';
+					var modulePath = './modules/' + moduleName + '/' + moduleName + '.js';
 					fs.stat(modulePath, function(err, stat) {
 						if (!err) {
 							//Delete module cache before reloading, forces complete reload
